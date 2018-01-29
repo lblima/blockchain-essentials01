@@ -2,4 +2,9 @@ import express from 'express';
 
 const app = express();
 
-console.log('Hello world!');
+app.route('/')
+    .get((req, res) => {
+        res.sendFile(`${__dirname}/public/index.html`);
+    });
+
+app.listen(3000);
