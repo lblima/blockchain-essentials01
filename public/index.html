@@ -3,11 +3,27 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>BC</title>
+        <title>Blockchain basics</title>
     </head>
 
     <body>
-        <h1>Hello from the server</h1>
-        <p>You have made your first javascript app</p>
+        <h1 id="response">No response</h1>
+        <button onclick="contactServer()">Contact the webserver</button>
+
+        <!-- <script>
+            function contactServer() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("response").innerHTML = this.responseText;
+                    }
+                };
+
+                xhttp.open("GET", "ajax-request", true);
+                xhttp.send();
+            }
+        </script>     -->
+
+        <script src="/assets/index.js"></script>
     </body>
 </html>
