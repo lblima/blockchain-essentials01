@@ -1,4 +1,4 @@
-import express from 'express'; 
+import express from 'express';
 
 const app = express();
 
@@ -9,9 +9,14 @@ app.route('/')
         res.sendFile(`${__dirname}/public/index.html`);
     });
 
+var test = {
+    firstName: 'Leo',
+    lastName: 'Lima'
+};
+
 app.route('/ajax-request')
     .get((req, res) => {
-        res.send('Ajax response...');
+        res.send(JSON.stringify(test));
     });
 
 app.listen(3000);
